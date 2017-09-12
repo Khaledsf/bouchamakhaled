@@ -1,0 +1,16 @@
+<h1>Articles#new</h1>
+<p>Find me in app/views/articles/new.html.erb</p>
+
+<%= form_for @article do |f| %>
+	<h2>title</h2>
+  <%= f.text_area :title %><br />
+  <h2>intro</h2>
+  <%= f.text_area :intro %><br />
+
+  <h2>body tag</h2>
+	<%= f.text_area :bodytag %><br />
+  <h2>body</h2>
+  <%= f.text_area :body %><br />
+
+  <%= f.submit('create') %>
+<% end %>

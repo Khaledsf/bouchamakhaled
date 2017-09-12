@@ -1,0 +1,25 @@
+<h2>Hello! This is INDEX</h2>
+<h2>Here is the list of all the articles</h2>
+<h2><%= link_to('Add a NEW article', new_article_path, :class => 'action new') %></h2>
+<table style="border-collapse: collapse; width: 100%;">
+	<tr style="background-color: #f2f2f2">
+    <th style="text-align: left; padding: 8px;">index-ttitle</th>
+    <th style="text-align: left; padding: 8px;">index-content</th> 
+    <th style="text-align: left; padding: 8px;">Article-index</th>
+    <th style="text-align: left; padding: 8px;">Article- title</th>
+    <th style="text-align: left; padding: 8px;">Actions</th>
+  </tr>
+  
+  <% @article.each do |a| %>
+  <tr>
+    <td style="text-align: left; padding: 8px;"><%= a.title %></td>
+    <td style="text-align: left; padding: 8px;"><%= a.intro[0..40] + "......" %></td>
+    <td style="text-align: left; padding: 8px;"><%= a.bodytag  %></td>
+    <td style="text-align: left; padding: 8px;"><%= a.body  %></td>
+    <td style="text-align: left; padding: 8px;">
+      <%= link_to("show", article_path(a.id), :class => 'action show')%>
+      <%= link_to("edit", edit_article_path(a.id), :class => 'action edit')%>
+      <%= link_to("delete", delete_article_path(a.id), :class => 'action delete')%>
+    <%end%>
+  </tr>
+</table>

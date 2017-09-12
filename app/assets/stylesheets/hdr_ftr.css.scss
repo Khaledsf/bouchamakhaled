@@ -1,0 +1,131 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*(1)The page header*/
+				html body{
+				margin: auto;
+				top: 0;
+				bottom: 0;
+			 	background-color: #F5EDED;
+			} 
+
+
+		/*(1-1)the main header*/
+			#div-header-content{
+				width: 100%;
+				height: 120px;
+				margin-top: -1em ;
+				background-color: #423B30;
+			}
+			#header-global-page{
+				margin: auto;
+				width: 780px;
+				height: 120px;
+			}
+			#header-h1{
+				margin-top: 40px;
+				float: left;
+				font-size: 150%;
+				width: 290px;
+				height: 60px;
+			}
+			#h1{
+				color: #FDFCFC;
+				text-decoration: none;
+				margin-left:7px;
+				letter-spacing: 1.7px;
+			}
+			#h1-wd{
+				color: #4BB02F;
+				margin-left:51px;
+				letter-spacing: 1.5px;
+			}
+			#header-ul{
+				text-decoration: none;
+			}
+			#header-ul li{
+				font-size: 150%;
+				text-decoration: none;
+				display: inline;
+				float: right;
+				padding-left: 35px;
+				margin-top: 40px;
+			}
+			.header-anchor{
+				text-decoration: none;
+				color: #FDFCFC;
+			}
+
+			/*The footer of the page*/
+
+			#main{
+				margin-top: 2em;
+				width: 100%;
+				height: 200px;
+				background-color: #524E4E;
+				/* ADDED ON RAILS */
+				position: fixed;
+				bottom: 0px;
+			}
+			#wrap-footer{
+				margin: auto;
+				width: 780px;
+				height: 160px;
+			}
+			#subscribe{
+				width: 260px;
+				height: 160px;
+				float: left;
+			}
+			#contact{
+				width: 260px;
+				height: 160px;
+				float: left;
+			}
+			#followme{
+				width: 260px;
+				height: 160px;
+				float: left;
+			}
+			.heading-h2{
+				font-size: 1.2em;
+				margin-top: 20px;
+				color: #4BB02F;
+			}
+			span{
+				margin-left: 80px;
+			}
+			.contact-p{
+				margin-left: 25px;
+				font-weight: bold;
+				font-weight: normal;
+				color: white;
+				letter-spacing: 1px;
+			}
+			.text-form{
+				color: white;
+			}
+			.follow-p{
+				margin-left: 80px;
+				font-weight: bold;
+				line-height: 10px;
+			}
+			form{
+				margin-left: 65px;
+			}
+			.logo{
+				margin-left: 20px;
+				margin-top: 5px;
+				float: left;
+			}
+			#copyright{
+				margin: auto;
+				width: 400px;
+				height: 30px;
+			}
+			#copyright-text{
+				font-size: 14px;
+				margin-left: 70px;
+				font-weight: bold;
+			}

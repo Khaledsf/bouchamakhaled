@@ -1,0 +1,19 @@
+<!-- After login -->
+<div id="num-of-com">
+	<span class="num_com"><%=@numOfComments%>&nbsp;&nbsp;COMMENTS</span>
+	<span class="num_com_adrs">khaledbouchama.com</span>
+	<span id="login-link"><%= link_to("Logout", users_logout_path)%></span>
+	<div id="msg-ico"><%= image_tag('msgico.png')%></div>
+</div>
+<div id="form-div">
+	<div class="pic-div"><%= image_tag('userico.png')%></div>
+	<%= form_for Comment.new do |f| %>
+	<aside id="greet-aside">Hello, </aside>
+	<aside id="input-aside"><%= @user%></aside>
+	<br />
+  <%= f.text_area :content, :id => 'input-comment'%>
+  <%= f.hidden_field "user_id", :value =>"#{session[:user_id]}" %>
+  <%= f.hidden_field "article_id", :value => "#{@article.id}".to_i %>
+	<%= f.submit 'post', :id => 'submit-btn' %>
+	<% end %>
+</div>

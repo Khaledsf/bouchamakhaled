@@ -1,0 +1,37 @@
+<!-- main content of the page -->
+		<div id="content-wrap">
+			<div id="div-text-articles"><h2><%=raw @article.bodytag %></h2>
+			</div>
+
+			<!-- the article -->
+			<div id="article-div">
+				<%=raw @article.body %>
+				<p id="bottom-line">Written by Khaled Bouchama</p>
+			</div>
+			<div id="spacer" style="width: 780px; height: 140px; margin: 0 auto; background-color:white;">
+				<div style="margin-left: 220px; margin-top: 15px"><%= image_tag('pencil.png')%></div>
+				<p style="font-size: 1em; letter-spacing: 0.2px; font-weight: 550; color: gray; margin-left: 200px;">Share your thoughts in the comment area bellow</p>
+			</div>
+
+			<!-- comment box -->
+			<%@rticle%>
+			<div id="comment-section-wrap">
+				<% if session[:user_id].nil? %>
+					<%= render "loggedout"%>
+				<%else%>
+					<%= render "loggedin"%>
+				<%end%>
+				
+				<% @commentData.each do |com| %>
+				<div id="user-data-wrap">
+					<div class="pic-div"><%= image_tag('userico.png')%></div>
+						<div id="user_date_wrap">
+							<div id="username"><span id="usr-span"><%= @userHash[com.user_id] %></span>&nbsp;&nbsp;&nbsp;<span id="date-span"><%= com.created_at.time.inspect.split(" ")[0] %></span></div>
+						</div>
+						<div id="text-body">
+							<p><%= com.content %></p>
+						</div>
+				</div>
+				<%end%>
+				
+			</div>

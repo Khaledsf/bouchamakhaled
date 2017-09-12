@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Admin</title>
+		<!-- <link rel="stylesheet" type="text/css" href="./stylesheet/index_css/style_header_index.css">
+		<link rel="stylesheet" type="text/css" href="./stylesheet/index_css/style_body_index.css"> -->
+		<%= stylesheet_link_tag('admin') %>
+	</head>
+	<body>
+		<!-- the header -->
+		<div id="div-header-content">
+			<header id="header-global-page">
+				<h1 id="header-h1"><a class="header-anchor"><%= link_to 'KHALED BOUCHAMA', welcome_index_path, :id => "h1" %><br><span id="h1-wd">Web Developer</span></a></h1>
+					<ul id="header-ul">
+						<li><a class="header-anchor" href="#">Portfolio</a></li>
+						<li><a class="header-anchor" href="#">Resume</a></li>
+						<li><a class="header-anchor" href="#">About</a><li>
+					</ul>
+			</header>
+		</div>
+		
+		<%= yield %>
+		
+	</body>
+
+</html>

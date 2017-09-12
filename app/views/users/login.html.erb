@@ -1,0 +1,15 @@
+<%= params %>
+<%= flash[:notice]%>
+<table>
+	<%= form_tag(users_attempt_login_path, :method => "post") %>
+	<tr>
+		<td><%= label_tag('username')  %></td>
+		<td><%= text_field_tag(:username) %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag('password') %></td>
+		<td><%= password_field_tag(:password) %></td>
+		<%= hidden_field_tag "article_id",  params[:format]%>
+		<td><%= submit_tag('Submit')  %></td>
+	</tr>
+</table>

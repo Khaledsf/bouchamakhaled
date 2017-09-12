@@ -1,0 +1,166 @@
+
+		
+	/*(1)The page header*/
+				html body{
+				margin: auto;
+				top: 0;
+				bottom: 0;
+			 	background-color: #F5EDED;
+			} 
+
+
+		/*(1-1)the main header*/
+			#div-header-content{
+				width: 100%;
+				height: 120px;
+				margin-top: -1em ;
+				background-color: #423B30;
+				/*background-color: #554D4C;*/
+				/*background-color: #574949;*/
+			}
+			#header-global-page{
+				margin: auto;
+				width: 780px;
+				height: 120px;
+			}
+			#header-h1{
+				margin-top: 40px;
+				float: left;
+				font-size: 150%;
+				width: 290px;
+				height: 60px;
+			}
+			#h1{
+				color: #FDFCFC;
+				margin-left:7px;
+				letter-spacing: 1.7px;
+				text-decoration: none;
+			}
+			#h1-wd{
+				color: #4BB02F;
+				margin-left:51px;
+				letter-spacing: 1.5px;
+			}
+			#header-ul{
+				text-decoration: none;
+			}
+			#header-ul li{
+				font-size: 150%;
+				text-decoration: none;
+				display: inline;
+				float: right;
+				padding-left: 35px;
+				margin-top: 40px;
+			}
+			.header-anchor{
+				text-decoration: none;
+				color: #FDFCFC;
+			}
+			
+	
+
+/*The body of the page*/
+
+/*main wrapper that wraps that wrapps every div.*/
+#content-wrap{
+	width: 1200px;
+	height: 2100px;
+	margin: 5px auto;
+	/*background-color: #E6E6E6;*/
+	/*border: 0.5px solid;*/
+}
+
+/*------------------------BEGINING OF BOX 1.*/
+/*wraps "form-index-wrap" which wrapps the form*/
+#index-wrap{
+	width: 1200px;
+	height: 600px;
+	/*margin: 20px auto;*/
+	/*background-color: blue;*/
+}
+#form-index-wrap{
+	height: 580px;
+	/*background-color: purple;*/
+}
+#textarea-index-title{
+	width:1000px;
+	height: 70px;
+	font-size: 100%;
+	border-radius: 5px;
+	border: none;
+}
+#textarea-index-content{
+	width:1000px;
+	height: 350px;
+	font-size: 100%;
+	border-radius: 5px;
+	border: none;
+}
+.inside-form-header{
+	height: 40px;
+	/*background-color: orange;*/
+}
+h3{
+	margin-left: 550px;
+	margin-top: 10px;
+  font-size: 1.6em;
+  letter-spacing: 2px;
+	position: absolute;
+	color: #086A87;
+	/*background-color: green;*/
+}
+#content-wrap h1{
+	margin-left: 420px;
+	text-decoration: underline;
+  font-size: 1.8em;
+  letter-spacing: 1.5px;
+  color: #088A4B;
+	/*background-color: green;*/
+}
+.input-post{
+	width:90px;
+	font-size: 100%;
+	border-radius: 6px;
+	background-color: #3ADF00;
+}
+.input-update{
+	width:90px;
+	font-size: 100%;
+	border-radius: 6px;
+	background-color: #F4FA58;
+}
+.input-delete{
+	width:90px;
+	font-size: 100%;
+	border-radius: 6px;
+	background-color: #B40431;
+}
+/*------------------------END OF BOX 1
+
+/*------------------------BEGINING OF BOX 2.*/
+/*wraps "form-article-wrap" which wrapps the form*/
+#article-wrap{
+	width: 1200px;
+	height: 1300px;
+	/*background-color: gray;*/
+}
+
+#form-article-wrap{
+	height: 1280px;
+	/*background-color: lightblue;*/
+}
+#textarea-article-title{
+	width: 1000px;
+	height: 70px;
+	font-size: 100%;
+	border-radius: 5px;
+	border: none;
+}
+#textarea-article-content{
+	width:1000px;
+	height: 980px;
+	font-size: 100%;
+	border-radius: 5px;
+	border: none;
+}
+/*-----------------------END OF BOX 2*/

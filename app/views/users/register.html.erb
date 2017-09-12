@@ -1,0 +1,20 @@
+<%= params %>
+<%= flash[:notice]%>
+<table>
+	<%= form_tag(users_attempt_register_path, :method => "post") %>
+	<tr>
+		<td><%= label_tag('username')  %></td>
+		<td><%= text_field_tag(:username) %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag('password') %></td>
+		<td><%= password_field_tag(:password) %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag('email') %></td>
+		<td><%= password_field_tag(:email) %></td>
+	</tr>
+	<tr>
+		<td><%= submit_tag('Register') %></td>
+	</tr>
+</table>
