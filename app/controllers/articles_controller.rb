@@ -1,26 +1,25 @@
 class ArticlesController < ApplicationController
   
   layout 'header_footer'   
-    
+  before_action :limit_access_for_users, :except => ['show']
   
 
 	def show
 		@article = Article.find(params[:id])
 		@commentData = @article.comments
-		puts "comment data: #{@commentData.inspect}"
 		@numOfComments = Comment.where(article_id: @article).length
 		if session[:user_id] != nil && session[:user_id] != 1
 			@user = User.find(session[:user_id]).username
+			@privilege = false
 		elsif session[:user_id] == 1
 			@user = AdminUser.find(session[:user_id]).admin_name
+			@privilege = true
 		end
 		@userHash = {}
 		@userHash[1] = "administrator"
 		User.all.each do |i|
 			@userHash[i.id] = i.username
 		end
-		puts "user hash => #{@userHash}"
-		puts "#{session[:user_id]}"
 	end
 
 	def edit
@@ -66,6 +65,11 @@ class ArticlesController < ApplicationController
 	def article_param
 		params.require(:article).permit(:title, :intro, :bodytag, :body)
 	end
-	
+
+	def limit_access_for_users
+		if @privilege != true
+			redirect_to root_path
+		end	
+	end
 
 end

@@ -16,9 +16,10 @@ class CommentsController < ApplicationController
   end
 
   def create
+    puts user_params
     @comment  = Comment.new(user_params)
     if @comment.save
-      redirect_to welcome_index_path
+      redirect_to article_path(params[:comment][:article_id])
     else
       redirect_to articles_path
     end

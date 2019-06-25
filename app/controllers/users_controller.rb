@@ -10,15 +10,12 @@ class UsersController < ApplicationController
   end
 
 	def attempt_login
-		puts "hello first params inside attempt login: #{params}"
 		if params[:username].present? && params[:password].present?
-			puts "inside the first if statement"
-  		found_user = User.where(:username => params[:username]).first
+  	   found_user = User.where(:username => params[:username]).first
   		if found_user
   			authorized_user = found_user.authenticate(params[:password])
   		end
   	end
-  	puts "This is params[:article_id]: #{params[:article_id]}"
     val = params[:article_id]
   	if authorized_user
   		session[:user_id] = authorized_user.id
@@ -26,7 +23,6 @@ class UsersController < ApplicationController
         val = params[:article_id]
         redirect_to(article_path(val))
       else
-        puts "this val = article_id: #{val.inspect}"
         redirect_to welcome_index_path
       end
       
@@ -47,7 +43,6 @@ class UsersController < ApplicationController
       end
       if new_user
         session[:user_id] = new_user.id
-        puts "this is session user id: #{session[:user_id]}"
         redirect_to(welcome_index_path)
       end
     end

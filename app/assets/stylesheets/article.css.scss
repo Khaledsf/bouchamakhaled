@@ -1,7 +1,12 @@
 /*The body of the page*/
-a:-webkit-any-link {
-    text-decoration: none;
+ 
+a:-webkit-any-link{
+    text-decoration: none!important;
     cursor: auto;
+}
+#return-link{
+    text-align: center;
+    font-size: 14px;
 }
 #div-text-articles{
 	width: 780px;
