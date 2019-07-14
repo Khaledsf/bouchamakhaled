@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 	end
 
   def attempt_register
-    if params[:username].present? && params[:password].present? && params[:email].present?
+    if params[:username].present? && params[:password].present? && params[:email].present? && params[:email] =~ /\A([\w+\-]\.?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i 
       user_already_exists = User.where(:username => params[:username]).first
       if user_already_exists
         flash[:notice] = "Choose another username"
@@ -61,4 +61,5 @@ class UsersController < ApplicationController
     
   end
 
+  
 end

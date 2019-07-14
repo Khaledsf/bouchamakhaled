@@ -2,6 +2,14 @@ Rails.application.routes.draw do
   
   root "welcome#index"
   
+  # routes to static pages.
+  get 'info/about'
+  get 'info/portfolio'
+  get 'info/resume'
+
+  get 'about', :to => redirect('about.html')
+  get 'portfolio', :to => redirect('portfolio.html')
+
   get 'admins', :to => 'admins#menu'
   get 'admins/menu'
   get 'admins/login'
