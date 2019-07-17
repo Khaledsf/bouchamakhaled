@@ -5,7 +5,10 @@ ruby '2.4.1'
 gem 'rails', '5.0.2'
 
 # Use mysql as the database for Active Record
-gem 'mysql2', '~> 0.3.20'
+# gem 'mysql2', '~> 0.3.20'
+
+#postgres
+gem 'ps'
 
 #puma server
 gem 'puma'
@@ -49,6 +52,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '>= 0.18', '< 2.0'
   gem 'rails_12factor'
 end
