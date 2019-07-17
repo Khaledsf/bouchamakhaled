@@ -12,10 +12,10 @@
 default: &default
   adapter: postgrsql
   encoding: utf8
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: khaled
   password:
-  socket: /usr/local/var/postgres
+  # socket: /usr/local/var/postgres
 
 development:
   <<: *default
