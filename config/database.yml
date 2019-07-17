@@ -138,6 +138,6 @@ development:
 production:
   <<: *default
   database: bouchamakhaled_production
-  username: myapp
+  username: khaled
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
 
