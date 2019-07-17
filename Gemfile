@@ -8,7 +8,10 @@ gem 'rails', '5.0.2'
 # gem 'mysql2', '~> 0.3.20'
 
 #postgres
-gem 'ps'
+gem 'pg', '~> 0.18'
+
+# For Heroku
+gem 'rails_12factor'
 
 #puma server
 gem 'puma'
@@ -51,7 +54,4 @@ group :development, :test do
   gem 'spring'
 end
 
-group :production do
-  gem 'pg', '>= 0.18', '< 2.0'
-  gem 'rails_12factor'
-end
+
