@@ -83,7 +83,6 @@ GEM
     nio4r (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
-    pg (1.1.4)
     puma (4.0.1)
       nio4r (~> 2.0)
     rack (2.0.4)
@@ -174,7 +173,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mysql2 (~> 0.3.20)
-  pg
   puma
   rails (= 5.0.2)
   rails_12factor
