@@ -137,5 +137,5 @@ test:
 production:
   <<: *default
   database: bouchamakhaled_production
-  username: root
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  username: 
+  password: 
