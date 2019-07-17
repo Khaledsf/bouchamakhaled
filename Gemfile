@@ -8,7 +8,7 @@ gem 'rails', '5.0.2'
 # gem 'mysql2', '~> 0.3.20'
 
 #ps
-gem 'ps'
+gem 'pg', '>= 0.18', '< 2.0'
 
 #puma server
 gem 'puma'
@@ -55,5 +55,5 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.11.0'
+  gem 'pg'
 end
