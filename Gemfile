@@ -5,10 +5,7 @@ ruby '2.4.1'
 gem 'rails', '5.0.2'
 
 # Use mysql as the database for Active Record
-# gem 'mysql2', '~> 0.3.20'
-
-#ps
-gem 'pg'
+gem 'mysql2', '~> 0.3.20'
 
 #puma server
 gem 'puma'
@@ -33,9 +30,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-# Khaled added the line bellow to deploy to heroku.
-gem 'rails_12factor'
-
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -54,6 +48,7 @@ group :development, :test do
   gem 'spring'
 end
 
-# group :production do
-#   # gem 'pg'
-# end
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
