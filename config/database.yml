@@ -56,3 +56,4 @@ production:
    <<: *default
    adapter: postgresql
    database: db/production.mysql2
+   socket: /var/run/postgresql/.s.PGSQL.5432
