@@ -44,7 +44,7 @@ group :development, :test do
   # gem 'spring'
 end
 
-group :development do
-	#production db
-gem 'pg', '~> 1.0.0'
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor'
 end
