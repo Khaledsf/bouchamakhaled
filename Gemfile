@@ -48,5 +48,3 @@ group :development do
 	#production db
 	gem 'pg'
 end
-
-end
