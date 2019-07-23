@@ -46,5 +46,5 @@ end
 
 group :development do
 	#production db
-gem 'pg', '~> 0.18'
+gem 'pg', '~> 1.0.0'
 end
