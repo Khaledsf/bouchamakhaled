@@ -47,13 +47,8 @@ test:
 # # #   production:
 # # #     url: <%= ENV['DATABASE_URL'] %>
 # # #
-# production:
-#   <<: *default
-#   database: bouchamakhaled_production
-#   username: bouchamakhaled
-#   password: <%= ENV['BOUCHAMAKHALED_DATABASE_PASSWORD'] %>
 production:
-   <<: *default
-   adapter: postgresql
-   database: db/production.mysql2
-   socket: /var/run/postgresql/.s.PGSQL.5432
+  <<: *default
+  database: bouchamakhaled_production
+  username: bouchamakhaled
+  password: <%= ENV['BOUCHAMAKHALED_DATABASE_PASSWORD'] %>
