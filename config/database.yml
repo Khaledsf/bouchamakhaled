@@ -47,8 +47,17 @@ test:
 # # #   production:
 # # #     url: <%= ENV['DATABASE_URL'] %>
 # # #
+# production:
+#   <<: *default
+#   database: bouchamakhaled_production
+#   username: bouchamakhaled
+#   password: <%= ENV['BOUCHAMAKHALED_DATABASE_PASSWORD'] %>
 production:
-  <<: *default
+  adapter: mysql2
+  encoding: utf8
   database: bouchamakhaled_production
-  username: bouchamakhaled
-  password: <%= ENV['BOUCHAMAKHALED_DATABASE_PASSWORD'] %>
+  pool: 5
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  shost: <%= ENV['RDS_HOSTNAME'] %>
+
